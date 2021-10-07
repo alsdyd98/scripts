@@ -2,6 +2,7 @@ name: make exe file in test folder
 
 on:
   push:
+    branches: [main]
     paths:
       - 'test/**'
 

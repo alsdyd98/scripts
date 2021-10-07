@@ -18,5 +18,5 @@ jobs:
 
     - name: make changes to Test
       shell: bash
-      run: |
+      run: 
         make -C test

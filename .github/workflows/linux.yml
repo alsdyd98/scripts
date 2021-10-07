@@ -18,5 +18,7 @@ jobs:
       - name: Check linux commit on
       - shell: bash
         run: wget -d https://github.com/alsdyd98/linux/archive/${{ github.sha }}.zip
-      - run: unzip ${{ github.sha }}.zip
-      - run: ./build-linux.sh ./${{ github.sha }} tinyconfig
+      - name: unzip file
+        run: unzip ${{ github.sha }}.zip
+      - name: update
+        run: ./build-linux.sh ./${{ github.sha }} tinyconfig

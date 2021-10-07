@@ -3,7 +3,7 @@ name: Check for linux commit update
 on:
   push:
     paths:
-      - 'linux/**'
+      - 'linux*/**'
 
 env:
   BUILD_TYPE: Debug

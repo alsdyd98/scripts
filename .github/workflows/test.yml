@@ -17,5 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make changes to Test
-      shell: bash
       run:  make -C test

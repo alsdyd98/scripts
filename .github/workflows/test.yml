@@ -1,6 +1,10 @@
-name: CSI2115 Linux kernel
+name: make exe file in test folder
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'test/**'
+
 
 env:
   BUILD_TYPE: Debug
@@ -12,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install Dependencies
+    - name: make changes to Test
       shell: bash
       run: |
-        ./install-deps.sh
+        make -C test

@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Check linux commit on
-    - shell: bash
-    - run: wget -d https://github.com/alsdyd98/linux/archive/${{ github.sha }}.zip
-    - run: unzip ${{ github.sha }}.zip
-    - run: ./build-linux.sh ./${{ github.sha }} tinyconfig
+      - name: Check linux commit on
+      - shell: bash
+      - run: wget -d https://github.com/alsdyd98/linux/archive/${{ github.sha }}.zip
+      - run: unzip ${{ github.sha }}.zip
+      - run: ./build-linux.sh ./${{ github.sha }} tinyconfig

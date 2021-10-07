@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check linux commit on
-      - shell: bash
+        shell: bash
         run: wget -d https://github.com/alsdyd98/linux/archive/${{ github.sha }}.zip
       - name: unzip file
         run: unzip ${{ github.sha }}.zip

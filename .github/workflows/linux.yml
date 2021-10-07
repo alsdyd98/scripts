@@ -3,7 +3,7 @@ name: Check for linux commit update
 on:
   push:
     paths:
-      - 'linux/**'
+      - 'linux*/**'
 
 env:
   BUILD_TYPE: Debug
@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 
+        uses: actions/checkout@v2 
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          submodules: true
 
       - name: Check linux commit on
         shell: bash

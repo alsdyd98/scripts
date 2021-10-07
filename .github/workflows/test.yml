@@ -1,6 +1,10 @@
 name: make exe file in test folder
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'test/**'
+
 
 env:
   BUILD_TYPE: Debug

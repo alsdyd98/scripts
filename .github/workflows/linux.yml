@@ -2,7 +2,7 @@ name: Check for linux commit update
 
 on:
   push:
-    branches: [ csi2115-f21 ]
+    branches: [ main, csi2115-f21 ]
     paths:
       - 'linux'
 

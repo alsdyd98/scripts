@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2 
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }} 
-          submodules: true
       - name: initailzation
         run: ./install-deps.sh
         

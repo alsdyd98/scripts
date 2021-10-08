@@ -16,13 +16,15 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2 
-#       - name: initailzation
-#         run: ./install-deps.sh
+      - name: initailzation
+        run: ./install-deps.sh
         
       - name: Check linux commit on
         run: 
              wget -d https://github.com/alsdyd98/linux/archive/$(git rev-parse HEAD:linux).zip
       - name: unzip file
         run: unzip $(git rev-parse HEAD:linux).zip
+      - name: name file which
+        run: ls
       - name: update
-        run: ./build-linux.sh ./$(git rev-parse HEAD:linux) tinyconfig
+        run: ./build-linux.sh $(git rev-parse HEAD:linux) tinyconfig

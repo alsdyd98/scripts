@@ -27,4 +27,4 @@ jobs:
       - name: name file which
         run: ls
       - name: update
-        run: ./build-linux.sh $(git rev-parse HEAD:linux) tinyconfig
+        run: ./build-linux.sh linux-$(git rev-parse HEAD:linux) tinyconfig

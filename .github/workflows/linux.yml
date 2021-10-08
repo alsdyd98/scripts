@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main, origin, csi2115-f21 ]
     paths:
-      - 'linux*/**'
+      - 'linux/**'
 
 env:
   BUILD_TYPE: Debug

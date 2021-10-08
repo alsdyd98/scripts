@@ -16,13 +16,12 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2 
-      - name: initailzation
-        run: ./install-deps.sh
+#       - name: initailzation
+#         run: ./install-deps.sh
         
       - name: Check linux commit on
-        shell: bash
         run: comm=$(git rev-parse HEAD:linux)
-            wget -d https://github.com/alsdyd98/linux/archive/$comm.zip
+             wget -d https://github.com/alsdyd98/linux/archive/$comm.zip
       - name: unzip file
         run: unzip $comm.zip
       - name: update
